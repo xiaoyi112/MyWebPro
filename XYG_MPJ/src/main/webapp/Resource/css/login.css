@@ -1,0 +1,31 @@
+/************************ 
+   Creation Date:2018.3.19
+   Created by:bird
+   Last Update:2018.3.19
+
+ *************************/
+input,textarea{outline:none}
+input:required:invalid,input:focus:invalid,select:required:invalid,select:focus:invalid,textarea[required]:invalid,textarea:focus:invalid{box-shadow:none}
+input:required,select:required{box-shadow:none}
+*{margin:0;padding:0;font-size:16px;font-family:arial,"MicrosoftYaHei"}
+body,html{weight:100%;height:100%}
+.pointer{cursor:pointer}
+a{text-decoration:none;}
+/* 去除IE输入框的X标记 */
+input[type=text]::-ms-clear { display: none; }
+/* 去除IE输入框的小眼睛标记 */
+input[type=password]::-ms-reveal { display: none; }
+
+.bg{width:100%;height:100%;background-position:center center;background-repeat:no-repeat;background-attachment:fixed;background-size:cover;background-image:url(../img/login/bg.jpg)}
+.login-page{position:absolute;top:0;width:100%;height:100%;z-index:101}
+.pwd-page{position:absolute;top:0;width:100%;height:100%;z-index:101;display:none}
+.top-frame{position:relative;top:0;left:0;width:300px;z-index:101}
+.top-frame span{display:block;width:300px;text-align:center;color:#004080;letter-spacing:6px}
+.login-frame{position:absolute;top:28%;left:20vh;width:300px;border-radius:10px;z-index:101}
+.form-group{margin:10px 0;border-width:1px 1px 2px 1px;border-style:solid;border-color:#aaa;border-radius:5px}
+.form-group label{color:#004080;font-size:15px;height:25px}
+.form-group input{border-width:0;height:25px;background-color:transparent;font-size:15px;padding-left:10px;width:180px;color:white;margin:10px 0}
+.form-group i.hide{display:none}
+.form-group .btn-op{border:0;font-size:15px;color:white;padding:0;width:90px}
+.btn{border:0;border-radius:4px;margin:5px 0;width:300px;height:40px;font-size:15px;color:white;background:-webkit-linear-gradient(#1AA93A,#006633);background:-o-linear-gradient(#1AA93A,#006633);background:-moz-linear-gradient(#1AA93A,#006633);background:linear-gradient(#1AA93A,#006633)}
+.forget-pwd{border:0;font-size:15px;color:white;padding:0;width:90px;float:right;background-color:transparent}
