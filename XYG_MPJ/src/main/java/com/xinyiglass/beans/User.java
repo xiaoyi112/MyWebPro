@@ -1,5 +1,9 @@
 package com.xinyiglass.beans;
 
+/**
+ * @author david
+ *用户模型对应表中的xyg_user
+ */
 public class User {
 	
 	private int userId;

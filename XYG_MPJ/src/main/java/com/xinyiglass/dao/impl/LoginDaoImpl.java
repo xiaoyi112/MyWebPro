@@ -7,9 +7,9 @@ import java.sql.Statement;
 
 import org.springframework.stereotype.Repository;
 
-import com.xinyiglass.Test.OracleUtil;
 import com.xinyiglass.beans.User;
 import com.xinyiglass.dao.LoginDao;
+import com.xinyiglass.utils.OracleUtil;
 
 
 public class LoginDaoImpl implements LoginDao {

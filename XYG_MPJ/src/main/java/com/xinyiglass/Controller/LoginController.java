@@ -27,8 +27,12 @@ public class LoginController extends BaseController{
 		 BeanUtils.populate(user, getRequest().getParameterMap());
 		
 		 User loginedUser = loginService.doLogin(user);
-		 getSession().setAttribute("user", loginedUser);
-		 
+		 if(loginedUser!=null&&!loginedUser.equals("")){
+			 getSession().setAttribute("user", loginedUser);
+		 }else{
+			 getSession().setAttribute("errorMsg", "用户名或密码错误");
+			 return "login";
+		 }
 		 return "index";
 	}
 }

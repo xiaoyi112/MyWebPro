@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
   <meta charset="utf-8">
@@ -33,7 +34,7 @@
 			</ul>
 			<ul class="layui-nav layui-layout-right">
 				<li class="layui-nav-item"><a href="javascript:;"> <img
-						src="Resource/img/YJL888888.png" class="layui-nav-img"> 易大大
+						src="Resource/img/YJL888888.png" class="layui-nav-img">${user.name}
 				</a>
 					<dl class="layui-nav-child">
 						<dd>
