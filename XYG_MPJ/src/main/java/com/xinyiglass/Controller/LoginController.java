@@ -3,10 +3,8 @@ package com.xinyiglass.Controller;
 import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
 import com.xinyiglass.beans.User;
 import com.xinyiglass.service.LoginService;
 
@@ -21,7 +19,7 @@ public class LoginController extends BaseController{
 		return "login";
 	}
 	
-	@RequestMapping(value="/dologin",method=RequestMethod.POST)
+	@RequestMapping(value="/login",method=RequestMethod.POST)
 	public String doLogin() throws Exception{		
 		 User user=new User();	 			
 		 BeanUtils.populate(user, getRequest().getParameterMap());
@@ -34,5 +32,18 @@ public class LoginController extends BaseController{
 			 return "login";
 		 }
 		 return "index";
+	}
+	
+	@RequestMapping("loginOff")
+	public String loginOff(){
+			
+	  User user=(User) getSession().getAttribute("user");
+	  
+	  if(user!=null&&!user.equals("")){
+		  
+		  getSession().removeAttribute("user");
+		  	
+	  }
+	  return "login";
 	}
 }

@@ -37,10 +37,10 @@
 				<div class="top-frame">
 					<span style="font-size:50px;margin-bottom:10px"> <i
 						class="fa fa-user-circle-o" aria-hidden="true"></i>
-					</span> <span style="font-size:20px;margin-bottom:10px">客户登录</span>
+					</span> <span style="font-size:20px;margin-bottom:10px">用户登录</span>
 				</div>
 				<form role="form" id="loginFrom" name="loginFrom" method="post"
-					action="dologin">
+					action="login">
 					<div class="form-group" style="padding:0 25px">
 						<label for="username" style="padding-right:1px"> <i
 							class="fa fa-user-o" aria-hidden="true"></i>
@@ -78,7 +78,14 @@
 		<input type="hidden" id="errorMsg" value=${errorMsg} >
 	</div>
 	<script>
-			//处理键盘事件 禁止后退键（Backspace）密码或单行、多行文本框除外
+	layui.use(['layer','element'], function() {
+				var layer = layui.layer;
+				var element=layui.element;
+				var errorMsg = $("#errorMsg").val();		
+				if (errorMsg != null && errorMsg != ""){									
+						layer.msg(errorMsg,{icon:5})							
+				}				
+			})
     function banBackSpace(e){   
         var ev = e || window.event;//获取event对象   
         var obj = ev.target || ev.srcElement;//获取事件源   
@@ -101,18 +108,7 @@
             return false;   
         }   
     }
-		layui.use('layer', function() {
-				var layer = layui.layer;
-				var errorMsg = $("#errorMsg").val();
-				if (errorMsg != null && errorMsg != "") {			
-						layer.msg(errorMsg,{icon:5})					
-				}
-			/* 	var index = layer.load(); */
-			});
-			//禁止后退键 作用于Firefox、Opera
-			document.onkeypress = banBackSpace;
-			//禁止后退键  作用于IE、Chrome
-			document.onkeydown = banBackSpace;
+    	
 	</script>
 
 </body>

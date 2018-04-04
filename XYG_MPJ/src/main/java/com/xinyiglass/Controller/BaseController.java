@@ -8,6 +8,7 @@ import javax.servlet.http.HttpSession;
 
 import net.sf.json.JSONObject;
 
+import org.junit.Test;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
 
@@ -61,16 +62,19 @@ public class BaseController {
 	public HttpSession getSession(){
 		return session;
 	}
-	
-	public String getParam(String text){
+	//根据boolean值来确定是否转换数据类型
+	public Object getParam(String text,boolean flag){
+		if(flag){		
+			int parseInt = Integer.parseInt(request.getParameter(text));
+			return  parseInt;
+		}
 		return request.getParameter(text);
 	}
-	
+	//将字符串以json返回前端页面
 	public void reString(Object object) throws IOException{
 		JSONObject fromObject = JSONObject.fromObject(object);
 		response.getWriter().print(fromObject);
 	}
-	
 	public JSONObject toJson(Object object){
 		
 		return JSONObject.fromObject(object);

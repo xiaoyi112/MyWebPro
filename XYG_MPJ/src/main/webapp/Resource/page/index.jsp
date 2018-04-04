@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="Resource/layui/css/layui.css">
   <script type="text/javascript" src="Resource/js/jQuery-2.1.4.min.js"></script>
   <script type="text/javascript" src="Resource/js/jquery.tab.js"></script>
+    <script type="text/javascript" src="Resource/js/jquery.autoMenu.js"></script>
 </head>
 
 <body class="layui-layout-body">
@@ -44,7 +45,7 @@
 							<a href="">安全设置</a>
 						</dd>
 					</dl></li>
-				<li class="layui-nav-item"><a href="">注销</a></li>
+				<li class="layui-nav-item"><a href="loginOff">注销</a></li>
 			</ul>
 		</div>
 
@@ -52,8 +53,7 @@
 			<div class="layui-side-scroll">
 				<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
 				<ul class="layui-nav layui-nav-tree" lay-filter="test">
-					<li class="layui-nav-item layui-nav-itemed"><a class=""
-						href="javascript:;">所有商品</a>
+					<!-- <li class="layui-nav-item layui-nav-itemed"><a href="javascript:;">网站信息</a>
 						<dl class="layui-nav-child">
 							<dd>
 								<a data-url="Resource/page/content/first" href="#" data-id="11" data-title="列表一" class="site-demo-active" data-type="tabAdd" data-filter="listOne">列表一</a>
@@ -79,9 +79,7 @@
 							<dd>
 								<a href="">超链接</a>
 							</dd>
-						</dl></li>
-					<li class="layui-nav-item"><a href="">云市场</a></li>
-					<li class="layui-nav-item"><a href="">发布商品</a></li>
+						</dl></li> -->
 				</ul>
 			</div>
 		</div>
