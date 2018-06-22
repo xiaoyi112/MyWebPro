@@ -7,14 +7,14 @@
 		<resultMap type="com.xinyiglass.beans.Menu" id="menuMap" autoMapping="false">
 			<id column="menu_id" property="menuId"/>
 			<result column="menu_name" property="menuName"/>
-			<result column="menu_parent" property="menuParent"/>
+			<result column="menu_pre" property="menuPre"/>
 		</resultMap>
 		
 			<select id="getMenu" resultType="com.xinyiglass.beans.Menu">								
-					SELECT * FROM XYG_TABLE WHERE MENU_PARENT=
+					SELECT * FROM XYG_MENU WHERE MENU_PRE=
 					<choose>
 						<when test="menuid!=null">#{menuid}</when>
-						<otherwise>0</otherwise>
+						<otherwise>1</otherwise>
 					</choose>	
 			</select>					
 		

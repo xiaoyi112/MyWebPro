@@ -27,7 +27,7 @@ public class IndexController extends BaseController{
 	public void getMenu(@RequestParam(value="menuId",required=false)String menuId){
 		
 		HashMap<String, List<Menu>> map=new HashMap<String, List<Menu>>();
-		int menuid=0;
+		int menuid=1;
 		if(menuId!=null&&!menuId.equals("")){
 			menuid=Integer.parseInt(menuId);
 		}
